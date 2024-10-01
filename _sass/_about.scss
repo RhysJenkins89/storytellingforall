@@ -13,5 +13,58 @@
             width: 95%;
             padding: 5rem 0.5rem;
         }
+
+        &__left-right-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            @media (max-width: $large-mobile) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        // There are too many repeated styles here. It might more sense to make .reverse a class of its own.
+        &__text-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 2rem 2rem 2rem 0;
+
+            &--reverse {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 2rem 0 2rem 2rem;
+            }
+        }
+
+        &__image-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 2rem 0 2rem 2rem;
+
+            &--reverse {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 2rem 2rem 2rem 0;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
     }
 }
