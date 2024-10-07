@@ -110,6 +110,22 @@ Basic home page structure:
 
 <!-- Quotes carousel section. Except 'quotes' isn't the right word. -->
 
+<div data-events-section class="" id="events">
+    <div class="events-section-container">
+        <h2>Events</h2>
+        {% for site_page in site.events %}
+        <div class="events-section-container__card">
+            <div class="events-section-container__image-container">
+                <img src="{{site_page.image}}" />
+            </div>
+            <h2><a href="{{ site_page.url | prepend: site.baseurl }}">{{ site_page.title }}</a></h2>
+            <p>{{ site_page.description }}</p>
+            <p><a href="{{ site_page.url | prepend: site.baseurl }}">Read more</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 <section data-services-section id="services">
     <div class="services-section-container">
         <h2>Services</h2>
@@ -225,23 +241,6 @@ Basic home page structure:
                 </div>
             {% endif %} 
         {% endfor %}
-    </div>
-</div> -->
-
-<!-- <div class="section" id="events">
-    <h1>Events</h1>
-    <div class="group">
-        {% for site_page in site.events %} {% if site_page.title %}
-        <div class="service-box">
-            <h2><a href="{{ site_page.url | prepend: site.baseurl }}">{{ site_page.title }}</a></h2> -->
-
-<!-- <img src="./images/brooke-cagle-jbwcenourcg-unsplash.jpg" /> -->
-
-<!-- <img src="{{site_page.image}}" />
-            <p>{{ site_page.description }}</p>
-            <p><a href="{{ site_page.url | prepend: site.baseurl }}">Read more</a></p>
-        </div>
-        {% endif %} {% endfor %}
     </div>
 </div> -->
 
