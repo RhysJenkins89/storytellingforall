@@ -39,52 +39,53 @@ Basic home page structure:
     <div class="about-section-container">
         <h2>About</h2>
 
-        <div class="about-section-container__left-right-container">
+        <div class="about-section-container__text-image-container">
             <!-- First Row -->
-            <!-- <div class="about-section-container__text-container">
+            <div class="about-section-container__text-container">
                 <p>
-                    Minim quis cillum excepteur nisi irure sunt aute. Id officia culpa deserunt adipisicing officia enim
-                    velit eu esse. Commodo labore anim ea anim. Nulla eiusmod eu nulla deserunt enim ipsum excepteur sit
-                    non et cupidatat.
+                    <p>
+                        I am co-host of
+                        <a href="https://www.lichfieldstorytellers.co.uk/" target="_blank">Lichfield Storytellers</a> and the
+                        <a href="https://www.sfs.org.uk/" target="_blank">Society for Storytelling</a> Midlands representative. My
+                        books,
+                        <a href="https://thehistorypress.co.uk/publication/west-midlands-folk-tales/" target="_blank"
+                            >West Midlands Folk Tales</a
+                        >
+                        and
+                        <a href="https://thehistorypress.co.uk/publication/warwickshire-folk-tales/" target="_blank"
+                            >Warwickshire Folk Tales</a
+                        >,
+                        are available from The History Press.
+                    </p>
                 </p>
             </div>
             <div class="about-section-container__image-container">
-                <img
-                    src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt=""
-                />
-            </div> -->
+                <img src="/images/cath-steampunk.jpg" alt="Cath dressed in steampunk clothes" />
+            </div>
             <!-- Second row -->
-            <!-- <div class="about-section-container__image-container--reverse">
-                <img
-                    src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt=""
-                />
-            </div>
             <div class="about-section-container__text-container--reverse">
-                <p>
-                    Minim quis cillum excepteur nisi irure sunt aute. Id officia culpa deserunt adipisicing officia enim
-                    velit eu esse. Commodo labore anim ea anim. Nulla eiusmod eu nulla deserunt enim ipsum excepteur sit
-                    non et cupidatat.
+                <p> 
+                    For news of my latest projects, why not like
+                    <a href="https://www.facebook.com/cathedwardsstorytellerandauthor/" target="_blank">my facebook page</a>?
                 </p>
-            </div> -->
+            </div>
+            <div class="about-section-container__image-container--reverse">
+                <img src="/images/cath-telling.jpg" alt="Cath telling stories" style="object-position: top" />
+            </div>
             <!-- Third row -->
-            <!-- <div class="about-section-container__text-container">
-                <p>
-                    Minim quis cillum excepteur nisi irure sunt aute. Id officia culpa deserunt adipisicing officia enim
-                    velit eu esse. Commodo labore anim ea anim. Nulla eiusmod eu nulla deserunt enim ipsum excepteur sit
-                    non et cupidatat.
-                </p>
+            <div class="about-section-container__text-container">
+                <p>If you would like to discuss a project, do not hesitate to get in touch.</p>
             </div>
             <div class="about-section-container__image-container">
                 <img
-                    src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt=""
+                    src="/images/cath-with-people.jpg"
+                    alt="Cath with other storytellers"
+                    style="object-position: top"
                 />
-            </div> -->
+            </div>
         </div>
 
-        <p>
+        <!-- <p>
             I am co-host of
             <a href="https://www.lichfieldstorytellers.co.uk/" target="_blank">Lichfield Storytellers</a> and the
             <a href="https://www.sfs.org.uk/" target="_blank">Society for Storytelling</a> Midlands representative. My
@@ -104,16 +105,16 @@ Basic home page structure:
             <a href="https://www.facebook.com/cathedwardsstorytellerandauthor/" target="_blank">my facebook page</a>?
         </p>
         <br />
-        <p>If you would like to discuss a project, do not hesitate to get in touch.</p>
+        <p>If you would like to discuss a project, do not hesitate to get in touch.</p> -->
     </div>
 </section>
 
 <!-- Quotes carousel section. Except 'quotes' isn't the right word. -->
 
-<div data-events-section class="" id="events">
+<!-- <div data-events-section class="" id="events">
     <div class="events-section-container">
-        <h2>Events</h2>
-        {% for site_page in site.events %}
+        <h2>Upcoming events</h2>
+        {% if site.events %} {% for site_page in site.events %}
         <div class="events-section-container__card">
             <div class="events-section-container__image-container">
                 <img src="{{site_page.image}}" />
@@ -122,9 +123,11 @@ Basic home page structure:
             <p>{{ site_page.description }}</p>
             <p><a href="{{ site_page.url | prepend: site.baseurl }}">Read more</a></p>
         </div>
-        {% endfor %}
+        {% endfor %} {% else %}
+        <p>There are currently no upcoming events.</p>
+        {% endif %}
     </div>
-</div>
+</div> -->
 
 <section data-services-section id="services">
     <div class="services-section-container">
