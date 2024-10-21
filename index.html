@@ -111,23 +111,25 @@ Basic home page structure:
 
 <!-- Quotes carousel section. Except 'quotes' isn't the right word. -->
 
-<!-- <div data-events-section class="" id="events">
+<section data-events-section class="" id="events">
     <div class="events-section-container">
         <h2>Upcoming events</h2>
-        {% if site.events %} {% for site_page in site.events %}
-        <div class="events-section-container__card">
-            <div class="events-section-container__image-container">
-                <img src="{{site_page.image}}" />
+        <div class="events-section-container__cards-container">
+            {% if site.events %} {% for site_page in site.events %}
+            <div class="card">
+                <div class="card__image-container">
+                    <img src="{{site_page.image}}" />
+                </div>
+                <h2><a href="{{ site_page.url | prepend: site.baseurl }}">{{ site_page.title }}</a></h2>
+                <p>{{ site_page.description }}</p>
+                <p class="card__read-more"><a href="{{ site_page.url | prepend: site.baseurl }}">Read more</a></p>
             </div>
-            <h2><a href="{{ site_page.url | prepend: site.baseurl }}">{{ site_page.title }}</a></h2>
-            <p>{{ site_page.description }}</p>
-            <p><a href="{{ site_page.url | prepend: site.baseurl }}">Read more</a></p>
+            {% endfor %} {% else %}
+            <p>There are currently no upcoming events.</p>
+            {% endif %}
         </div>
-        {% endfor %} {% else %}
-        <p>There are currently no upcoming events.</p>
-        {% endif %}
     </div>
-</div> -->
+</section>
 
 <section data-services-section id="services">
     <div class="services-section-container">
