@@ -115,7 +115,7 @@ Basic home page structure:
     <div class="events-section-container">
         <h2>Upcoming events</h2>
         <div class="events-section-container__cards-container">
-            {% if site.events %} {% for site_page in site.events %}
+            {% if site.events.length > 0 %} {% for site_page in site.events %}
             <div class="card">
                 <div class="card__image-container">
                     <img src="{{site_page.image}}" />
