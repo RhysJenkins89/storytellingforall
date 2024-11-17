@@ -6,7 +6,6 @@ let menuIsOpen = false;
 
 if (hamburger && mobileMenu && overlay && mobileMenuItems) {
     function openMobileMenu() {
-        // document.body.scrollTo(0, 0); // There is a method that scrolls to the top of the page. This ain't it.
         document.body.style.overflow = "hidden";
         hamburger.classList.add("open");
         mobileMenu.classList.remove("not-visible");

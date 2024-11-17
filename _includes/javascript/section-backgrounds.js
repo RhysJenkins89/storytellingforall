@@ -1,7 +1,5 @@
 const sectionElements = document.getElementsByTagName("section");
 
-console.log("sections", sectionElements);
-
 if (sectionElements) {
     Array.from(sectionElements).forEach((element, index) => {
         if (index % 2 === 1) {
@@ -9,5 +7,3 @@ if (sectionElements) {
         }
     });
 }
-
-console.log("sections");
