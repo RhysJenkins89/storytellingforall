@@ -259,7 +259,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-sass-converter
 
 BUNDLED WITH
    1.17.2
